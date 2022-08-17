@@ -4,7 +4,7 @@ $task = [
     'Title' => 'Finish The PHP Practioner',
     'Due' => 'August 31',
     'Assigned to' => 'Bellini',
-    'Status' => false
+    'Status' => true
 ];
 
 var_dump($task);

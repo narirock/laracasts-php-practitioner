@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Booleans</title>
+    <title>Conditionals</title>
 
     <style>
         header {
@@ -16,9 +16,9 @@
 
 <ul>
 
-   <li>
-       <strong>Title: </strong> <?= $task['Title']; ?>
-   </li>
+    <li>
+        <strong>Title: </strong> <?= $task['Title']; ?>
+    </li>
 
     <li>
         <strong>Due date: </strong> <?= $task['Due']; ?>
@@ -29,7 +29,14 @@
     </li>
 
     <li>
-        <strong>Status: </strong> <?= $task['Status'] ? 'Completed' : 'Incompleted'; ?>
+        <strong>Status: </strong>
+        <?php
+            if ($task['Status'] = true) {
+                echo 'Completed &#9989';
+            } else {
+                echo 'Incomplete &#10060';
+            }
+        ?>
     </li>
 
 </ul>
