@@ -1,13 +1,17 @@
 <?php
 
+namespace database;
+use PDO;
 class QueryBuilder
 {
-    public function __construct($pdo)
+    protected PDO $pdo;
+
+    public function __construct(PDO $pdo)
     {
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table)
+    public function selectAll($table): array
     {
         $statement = $this->pdo->prepare("SELECT * FROM {$table}");
         $statement->execute();

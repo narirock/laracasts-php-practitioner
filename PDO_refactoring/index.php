@@ -1,11 +1,24 @@
 <?php
 
-$query = require 'bootstrap.php';
+$app['database'] = require './core/bootstrap.php';
 
-require 'Task.php';
-require 'index.view.php';
+//$router = new Router;
+//
+//require 'routes.php';
+//
+//require $router->direct($uri);
 
-$tasks = $query->selectAll('tasks');
+//try {
+//    require Router::load('routes.php')
+//        ->direct(Request::uri());
+//} catch (Exception $e) {
+//
+//}
 
-var_dump($tasks);
+try {
+    require Router::load('routes.php')
+        ->direct(Request::uri());
+} catch (Exception $e) {
+}
 
+//die(var_dump($app));
