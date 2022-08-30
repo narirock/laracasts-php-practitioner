@@ -1,7 +1,9 @@
 <?php
 
 namespace database;
+
 use Exception;
+
 class Router
 {
     protected $routes = [];
@@ -14,7 +16,7 @@ class Router
     /**
      * @throws Exception
      */
-    
+
     public function direct($uri)
     {
         if (array_key_exists($uri, $this->routes)) {

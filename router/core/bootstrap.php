@@ -1,10 +1,15 @@
 <?php
 
-$config = require 'router/config.php';
+use database\Connection;
+use database\QueryBuilder;
 
-require './Router.php';
-require './database/Connection.php';
-require './database/QueryBuilder.php';
+$config = require 'config.php';
+
+
+include "Router.php";
+require "database/Connection.php";
+include "database/QueryBuilder.php";
+
 
 return new QueryBuilder(
     Connection::make($config['database'])

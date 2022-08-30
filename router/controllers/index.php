@@ -1,6 +1,7 @@
 <?php
 
-$query = require ('../core/bootstrap.php');;
+require_once("core/bootstrap.php");
+
 $tasks = $query->selectAll('tasks');
 
-require '../views/index.view.php';
+require "views/index.view.php";
