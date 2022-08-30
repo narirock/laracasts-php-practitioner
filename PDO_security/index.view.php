@@ -1,8 +1,8 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PDO Refactoring</title>
+    <title>PDO Security</title>
 
     <style>
         header {
@@ -10,18 +10,9 @@
             padding: 2em;
         }
     </style>
-
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 
 <body>
-<nav>
-    <ul>
-        <li><a href="/PDO_refactoring/controllers/about.php"></a>About Page</li>
-    </ul>
-</nav>
-
-<h1>Tasks</h1>
 
 <ul>
     <?php foreach ($tasks as $task) : ?>

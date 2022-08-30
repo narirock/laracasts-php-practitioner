@@ -6,5 +6,5 @@ $router = new Router();
 
 $router->define([
     '' => 'controllers/index.php',
-    'about' => 'controllers/about.php'
+    'about' => 'controllers/about.view.php'
 ]);

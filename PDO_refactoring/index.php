@@ -1,24 +1,10 @@
 <?php
 
-$app['database'] = require './core/bootstrap.php';
+require 'functions.php';
+require 'Task.php';
 
-//$router = new Router;
-//
-//require 'routes.php';
-//
-//require $router->direct($uri);
+$pdo = Connection();
 
-//try {
-//    require Router::load('routes.php')
-//        ->direct(Request::uri());
-//} catch (Exception $e) {
-//
-//}
+$tasks = fetchAllTasks($pdo);
 
-try {
-    require Router::load('routes.php')
-        ->direct(Request::uri());
-} catch (Exception $e) {
-}
-
-//die(var_dump($app));
+require 'index.view.php';
